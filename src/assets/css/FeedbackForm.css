@@ -1,0 +1,259 @@
+.form__input {
+    margin-bottom: 35px;
+    position: relative;
+    border-color: white;
+}
+
+.form__control {
+    border: 1px solid #9aa8ba;
+    border-radius: 8px;
+    outline: none;
+    padding: 15px 0 15px 10px;
+    transition: border-color .2s;
+    width: calc(100% - 14px)
+}
+
+.form__label {
+    align-items: center;
+    border-radius: 10px;
+    column-gap: 3px;
+    display: flex;
+    left: 10px;
+    padding: 0 10px;
+    pointer-events: none;
+    position: absolute;
+    top: 17px;
+    transition: all .3s ease;
+    color: white;
+}
+
+.form__control,
+.form__label {
+    background-color: transparent;
+    line-height: 22px;
+    color: white;
+}
+
+.form__control:focus~.form__label,
+.form__input.active .form__label,
+.form__textarea-control.active~.form__label,
+.form__textarea-control:focus+.form__label {
+    top: -10px;
+    background-color: #252631;
+}
+
+.form__control,
+.form__error,
+.form__label,
+.form__sent {
+    font-family: Open Sans;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.textarea {
+    background-color: transparent;
+    font-family: Open Sans;
+    font-size: 16px;
+    font-weight: 400;
+    height: 100px;
+}
+
+.form__submition {
+    align-items: center;
+    column-gap: 40px;
+    display: flex;
+}
+
+.form__button {
+    --padding: 50px;
+    border: none;
+    cursor: pointer;
+    font-size: 13px;
+    line-height: 18px;
+    opacity: 1;
+    position: relative;
+    transition: background-color .3s, width .2s, font-size .2s, color .2s
+}
+
+.button {
+    background-color: #2d76f9;
+    border-radius: 35px;
+    color: #fff;
+    font-family: Open Sans;
+    font-weight: 400;
+    padding: 20px var(--padding);
+    text-transform: uppercase;
+    transition: background-color .2s;
+    opacity: 0.9;
+}
+
+.button:hover {
+    opacity: 1;
+}
+
+.form__description {
+    font-family: Open Sans;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 22px;
+    text-align: left
+}
+
+
+.under {
+    width: 100%;
+    margin-top: 150px;
+    margin-bottom: 150px;
+    height: 100%;
+    overflow: hidden;
+    background-color: #252631;
+}
+
+.tellUs {
+    width: 35%;
+    float: left;
+    color: #eff3ff;
+}
+
+.tellUs .first {
+    font-size: 38px;
+    font-weight: 500;
+    margin-top: 14px;
+}
+
+.tellUs .second {
+    font-family: Open Sans;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 22px;
+    margin-top: 30px;
+}
+
+
+@media screen and (max-width: 960px) {
+    .tellUs .second {
+        display: none;
+    }
+
+    .tellUs {
+        width: 100%;
+        color: #eff3ff;
+        margin-bottom: 20px;
+        display: flex;
+    }
+
+    .tellUs .pic {
+        width: 25%;
+        float: left;
+        color: #eff3ff;
+    }
+
+    .tellUs .pic img {
+        width: 100%;
+        float: left;
+        color: #eff3ff;
+    }
+
+    .tellUs .first {
+        width: 70%;
+        float: right;
+        font-size: 20px;
+        padding-left: 50px;
+        align-content: center;
+        margin: auto;
+    }
+
+}
+
+.form {
+    float: right;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    min-width: 400px;
+    z-index: 10;
+    color: #eff3ff;
+    width: 55%;
+}
+
+
+.form label {
+    color: #eff3ff;
+}
+
+.contact__form {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    min-width: 400px;
+    width: 20vw;
+    z-index: 10;
+}
+
+.formButtonWith {
+    overflow: hidden;
+}
+
+.formButtonWith button {
+    float: left;
+}
+
+.formWarning {
+    float: right;
+    width: 80%;
+    margin-top: 20px;
+}
+
+@media screen and (max-width: 960px) {
+    .form {
+        display: flex;
+        flex-direction: column;
+        flex-grow: 1;
+        min-width: 0px;
+
+        z-index: 10;
+        color: #eff3ff;
+        width: 100%;
+    }
+
+    .form__submition {
+        align-items: center;
+        column-gap: 40px;
+        display: block;
+    }
+
+    .form__button {
+        --padding: 50px;
+        border: none;
+        cursor: pointer;
+        font-size: 13px;
+        line-height: 18px;
+        opacity: 1;
+        position: relative;
+        transition: background-color .3s, width .2s, font-size .2s, color .2s;
+        display: block;
+    }
+
+    .button {
+        background-color: #2d76f9;
+        border-radius: 35px;
+        color: #fff;
+        font-family: Open Sans;
+        font-weight: 400;
+        padding: 20px var(--padding);
+        text-transform: uppercase;
+        transition: background-color .2s;
+        text-align: center;
+    }
+
+    .form__description {
+        display: block;
+        font-family: Open Sans;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 22px;
+        text-align: center;
+        width: 100%;
+    }
+}
